@@ -29,11 +29,13 @@ import { MatCardModule } from '@angular/material/card';
 
 // Aqui vai ficar os imports dos components criados para o projeto
 import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
