@@ -1,21 +1,33 @@
 <div class="container">
     <form class="form mat-elevation-z6">
       
-      <h1>Tela de Login - com estilo</h1>
+      <h1>Tela de Login - Com estilo</h1>
 
       <img src="assets/img/img-login.jpg" alt="Tela de Login - com estil">
 
         <mat-form-field class="full-width" appearance="fill">
           <mat-label>E-mail</mat-label>
-          <input matInput placeholder="Ex. abc@mail.com">
+          <input 
+          [formControl]="email"
+          required
+          [(ngModel)]="credenciais.email" 
+          name="email"
+          matInput 
+          placeholder="Ex. abc@mail.com">
         </mat-form-field>
       
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input ty matInput placeholder="Ex. Abc1234">
+            <input
+            [formControl]="senha"
+            required
+            [(ngModel)]="credenciais.senha" 
+            name="senha"
+            type="password" 
+            ty matInput placeholder="Ex. Abc1234">
           </mat-form-field>
 
-          <button class="full-width mat-elevation-z6" mat-stroked-button>LOGIN</button>
+          <button [disabled]="!validarCampos()" class="full-width mat-elevation-z6" mat-stroked-button>Login</button>
       </form>
 
 </div>
