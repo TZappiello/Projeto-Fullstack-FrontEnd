@@ -27,7 +27,7 @@
             ty matInput placeholder="Ex. Abc1234">
           </mat-form-field>
 
-          <button [disabled]="!validarCampos()" class="full-width mat-elevation-z6" mat-stroked-button>Login</button>
+          <button (click)="logar()" [disabled]="!validarCampos()" class="full-width mat-elevation-z6" mat-stroked-button>Login</button>
       </form>
 
 </div>
