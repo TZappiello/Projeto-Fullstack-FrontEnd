@@ -1,6 +1,7 @@
 .card { 
     width: 90%;
     margin: auto;
+    margin: 1rem auto ;
     background-color: rgb(247, 241, 241);
 }
 img {
