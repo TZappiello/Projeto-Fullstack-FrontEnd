@@ -1,7 +1,8 @@
 .card { 
-    width: 90%;
+    width: 80%;
     margin: auto;
-    margin: 1rem auto ;
+    border-radius: .8rem;
+    margin: -2rem auto ;
     background-color: rgb(247, 241, 241);
 }
 img {
