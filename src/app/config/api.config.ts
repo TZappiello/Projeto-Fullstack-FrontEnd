@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-    baseUrl: 'endpoint do backend na nuvem herouko'
+    baseUrl: 'https://prod-fullstack-backend.herokuapp.com'
 }
