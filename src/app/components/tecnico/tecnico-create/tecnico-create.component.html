@@ -4,14 +4,16 @@
         <img src="assets/img/img-tecnico-create.png" alt="Imagem Tela tecnico-create" style="opacity: 0.3">
 
         <section class="section">
-            <mat-checkbox class="margin" color="primary">Admin</mat-checkbox>
-            <mat-checkbox class="margin" color="primary">Técnico</mat-checkbox>
-            <mat-checkbox class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Técnico</mat-checkbox>
         </section>
 
         <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Nome</mat-label>
             <input 
+            [(ngModel)]="tecnico.nome"
+            name="nome"
             [formControl]="nome"
             required
             matInput 
@@ -23,6 +25,8 @@
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>CPF</mat-label>
             <input 
+            [(ngModel)]="tecnico.cpf"
+            name="cpf"
             [formControl]="cpf"
             required
             matInput 
@@ -34,6 +38,8 @@
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>E-mail</mat-label>
             <input
+            [(ngModel)]="tecnico.email"
+            name="email"
             [formControl]="email"
             required 
             matInput 
@@ -43,7 +49,10 @@
 
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Senha</mat-label>
-            <input type="password" 
+            <input 
+            [(ngModel)]="tecnico.senha"
+            name="senha"
+            type="password" 
             [formControl]="senha"
             required
             matInput 
@@ -51,7 +60,7 @@
             <mat-icon matSuffix>password</mat-icon>
           </mat-form-field>
 
-          <button [disabled]="!validaCampos()" class="fullwidth mat-elevation-z6" mat-flat-button color="primary">Cadastrar</button>
+          <button (click)="create()" [disabled]="!validaCampos()" class="fullwidth mat-elevation-z6" mat-flat-button color="primary">Cadastrar</button>
           <button routerLink="../" class="fullwidth mat-elevation-z6" mat-stroked-button color="warn">Cancelar</button>
 
     </form>
