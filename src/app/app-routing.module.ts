@@ -1,3 +1,4 @@
+import { TecnicoUpdadeComponent } from './components/tecnico/tecnico-updade/tecnico-updade.component';
 import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
 
       { path: 'tecnicos', component: TecnicoListComponent },
       { path: 'tecnicos/create', component: TecnicoCreateComponent },
+      { path: 'tecnicos/updade/:id', component: TecnicoUpdadeComponent }
     ]
   }
 ];

@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { TecnicoUpdadeComponent } from './components/tecnico/tecnico-updade/tecnico-updade.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { NgxMaskModule } from 'ngx-mask';
     HeaderComponent,
     TecnicoListComponent,
     LoginComponent,
-    TecnicoCreateComponent
+    TecnicoCreateComponent,
+    TecnicoUpdadeComponent
   ],
   imports: [
     BrowserModule,
