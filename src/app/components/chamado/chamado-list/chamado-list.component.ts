@@ -66,7 +66,7 @@ export class ChamadoListComponent implements OnInit {
   ordernarPorStatus(status: any): void{
     let lista: Chamado[] = [];
     this.ELEMENT_DATA.forEach(element => {
-      if(element.status = status){
+      if(element.status == status){
         lista.push(element)
       }
     });
