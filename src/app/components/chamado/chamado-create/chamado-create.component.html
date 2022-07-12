@@ -5,14 +5,18 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Discrição do Chamado</mat-label>
-          <input matInput placeholder="Ex. Digite as tarefas">
+          <input 
+          [formControl]="titulo"
+          required
+          matInput 
+          placeholder="Ex. Digite as tarefas">
         </mat-form-field>
       </form>
 
       <div class="status-prioridade">
         <mat-form-field appearance="outline">
             <mat-label>Selecione um status</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="status" required>
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
@@ -21,7 +25,7 @@
 
           <mat-form-field appearance="outline">
             <mat-label>Selecione uma prioridade</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="prioridade" required>
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
               <mat-option value="2">ALTA</mat-option>
@@ -32,7 +36,7 @@
       <div class="tecnico">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um Tecnico</mat-label>
-            <mat-select>
+            <mat-select [formControl]="tecnico" required>
               <mat-option value="0">Thiago</mat-option>
             </mat-select>
           </mat-form-field>
@@ -41,7 +45,7 @@
       <div class="cliente">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um Cliente</mat-label>
-            <mat-select>
+            <mat-select [formControl]="cliente" required>
               <mat-option value="0">Bob Brown</mat-option>
             </mat-select>
           </mat-form-field>
@@ -50,11 +54,16 @@
       <form class="form">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Deixe um comentário </mat-label>
-          <textarea  class="descricao" matInput placeholder="Ex. Feito a manutenção"></textarea>
+          <textarea  
+          [formControl]="descricao" 
+          required
+          class="descricao" 
+          matInput 
+          placeholder="Ex. Feito a manutenção"></textarea>
         </mat-form-field>
       </form>
 
-      <button class="full-width mat-elevation-z6" mat-raised-button color="primary">Abrir</button>
+      <button [disabled]="!validaCampos()" class="full-width mat-elevation-z6" mat-raised-button color="primary">Abrir</button>
       <button class="full-width mat-elevation-z6" mat-stroked-button color="warn">Cancelar</button>
 
       <p class="full-width">Por tzappiello</p>
