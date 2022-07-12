@@ -1,1 +1,61 @@
-<p>chamado-create works!</p>
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Criando chamado</h1>
+    <img class="full-width" src="assets/img/img-chamado.svg" alt="">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Discrição do Chamado</mat-label>
+          <input matInput placeholder="Ex. Digite as tarefas">
+        </mat-form-field>
+      </form>
+
+      <div class="status-prioridade">
+        <mat-form-field appearance="outline">
+            <mat-label>Selecione um status</mat-label>
+            <mat-select>
+              <mat-option value="0">ABERTO</mat-option>
+              <mat-option value="1">EM ANDAMENTO</mat-option>
+              <mat-option value="2">ENCERRADO</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Selecione uma prioridade</mat-label>
+            <mat-select>
+              <mat-option value="0">BAIXA</mat-option>
+              <mat-option value="1">MÉDIA</mat-option>
+              <mat-option value="2">ALTA</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div class="tecnico">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Selecione um Tecnico</mat-label>
+            <mat-select>
+              <mat-option value="0">Thiago</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div class="cliente">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Selecione um Cliente</mat-label>
+            <mat-select>
+              <mat-option value="0">Bob Brown</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+      
+      <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Deixe um comentário </mat-label>
+          <textarea  class="descricao" matInput placeholder="Ex. Feito a manutenção"></textarea>
+        </mat-form-field>
+      </form>
+
+      <button class="full-width mat-elevation-z6" mat-raised-button color="primary">Abrir</button>
+      <button class="full-width mat-elevation-z6" mat-stroked-button color="warn">Cancelar</button>
+
+      <p class="full-width">Por tzappiello</p>
+</div>
