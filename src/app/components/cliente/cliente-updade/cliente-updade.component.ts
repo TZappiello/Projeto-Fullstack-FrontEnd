@@ -51,7 +51,6 @@ export class ClienteUpdadeComponent implements OnInit {
       this.toast.success('Cliente atualizado com sucesso', 'Atualização');
       this.router.navigate(['clientes']);
     }, ex =>{
-      console.log(ex)
       if(ex.error.erros){
         ex.error.erros.forEach(element => {
           this.toast.error(element.message);
