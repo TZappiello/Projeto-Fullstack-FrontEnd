@@ -15,6 +15,7 @@ import { TecnicoService } from 'src/app/services/tecnico.service';
   styleUrls: ['./chamado-create.component.css']
 })
 export class ChamadoCreateComponent implements OnInit {
+ 
   chamado: Chamado ={
     prioridade: '',
     status: '',
