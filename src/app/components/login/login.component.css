@@ -35,3 +35,10 @@ img {
 button {
     margin-top: 1.5rem;
 }
+
+p {
+    width: 100%;
+    margin-top: 1rem;
+    opacity: .5;
+    text-align: center;
+}
