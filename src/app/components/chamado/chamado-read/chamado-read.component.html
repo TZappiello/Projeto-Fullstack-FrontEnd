@@ -7,7 +7,8 @@
           <mat-label>{{ chamado.titulo }}</mat-label>
           <input
           [disabled]="true"
-          
+          [(ngModel)]="chamado.titulo"
+          name="titulo"
           matInput>
         </mat-form-field>
       </form>
@@ -16,7 +17,9 @@
         <mat-form-field appearance="outline">
             <mat-label>STATUS: ({{ retornaStatus(chamado.status) }})</mat-label>
             <mat-select
-            [disabled]="true">
+            [disabled]="true"
+            [(ngModel)]="chamado.status"
+            name="status">
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
@@ -26,7 +29,9 @@
           <mat-form-field appearance="outline">
             <mat-label>PRIORIDADE: ({{ retornaPrioridade(chamado.prioridade) }})</mat-label>
             <mat-select  
-            [disabled]="true">
+            [disabled]="true"
+            [(ngModel)]="chamado.prioridade"
+            name="prioridade">
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
               <mat-option value="2">ALTA</mat-option>
@@ -38,7 +43,9 @@
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>TÉCNICO: ({{ chamado.nomeTecnico }})</mat-label>
             <mat-select 
-            [disabled]="true">
+            [disabled]="true"
+            [(ngModel)]="chamado.tecnico"
+            name="tecnico">
               <mat-option *ngFor="let tec of tecnicos" value="{{ tec.id }}">{{ tec.nome }}</mat-option>
             </mat-select>
           </mat-form-field>
@@ -48,7 +55,9 @@
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>CLIENTE: ({{ chamado.nomeCliente }})</mat-label>
             <mat-select 
-            [disabled]="true">
+            [disabled]="true"
+            [(ngModel)]="chamado.cliente"
+            name="cliente">
               <mat-option *ngFor="let cli of clientes" value="{{ cli.id }}">{{ cli.nome }}</mat-option>
             </mat-select>
           </mat-form-field>
@@ -59,6 +68,8 @@
           <mat-label> {{ chamado.observacoes }} </mat-label>
           <textarea  
           [disabled]="true" 
+          [(ngModel)]="chamado.observacoes"
+          name="observacoes"
           class="observacoes" 
           matInput></textarea>
         </mat-form-field>
