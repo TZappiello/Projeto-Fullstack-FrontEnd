@@ -16,6 +16,7 @@ import { ChamadoUpdateComponent } from './components/chamado/chamado-update/cham
 import { Routes, RouterModule } from '@angular/router';
 import { ClienteUpdadeComponent } from './components/cliente/cliente-updade/cliente-updade.component';
 import { TecnicoUpdadeComponent } from './components/tecnico/tecnico-updade/tecnico-updade.component';
+import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
 
       { path: 'chamados', component: ChamadoListComponent},
       { path: 'chamados/create', component: ChamadoCreateComponent},
-      { path: 'chamados/update/:id', component: ChamadoUpdateComponent}
+      { path: 'chamados/update/:id', component: ChamadoUpdateComponent},
+      { path: 'chamados/read/:id', component: ChamadoReadComponent}
 
     ]
   }
