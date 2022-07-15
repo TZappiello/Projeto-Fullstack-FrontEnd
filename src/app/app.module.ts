@@ -46,6 +46,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxMaskModule } from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr';
+import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ToastrModule } from 'ngx-toastr';
     ClienteDeleteComponent,
     ChamadoListComponent,
     ChamadoCreateComponent,
-    ChamadoUpdateComponent
+    ChamadoUpdateComponent,
+    ChamadoReadComponent
   ],
   imports: [
     BrowserModule,
