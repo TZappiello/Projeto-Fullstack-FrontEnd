@@ -10,7 +10,7 @@
 .form{
     width: 30rem;
     margin: auto;
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 1rem 1rem;
     background-color: #FFFFFF;
     border-radius: 1rem;
 }
@@ -41,4 +41,8 @@ p {
     margin-top: 1rem;
     opacity: .5;
     text-align: center;
+}
+
+mat-icon {
+    opacity: .6;
 }

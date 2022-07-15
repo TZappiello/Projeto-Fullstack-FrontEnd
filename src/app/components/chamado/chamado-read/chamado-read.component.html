@@ -46,7 +46,7 @@
             [disabled]="true"
             [(ngModel)]="chamado.tecnico"
             name="tecnico">
-              <mat-option *ngFor="let tec of tecnicos" value="{{ tec.id }}">{{ tec.nome }}</mat-option>
+              <mat-option>{{ chamado.nomeTecnico }}</mat-option>
             </mat-select>
           </mat-form-field>
       </div>
@@ -58,7 +58,7 @@
             [disabled]="true"
             [(ngModel)]="chamado.cliente"
             name="cliente">
-              <mat-option *ngFor="let cli of clientes" value="{{ cli.id }}">{{ cli.nome }}</mat-option>
+              <mat-option>{{ chamado.nomeCliente }}</mat-option>
             </mat-select>
           </mat-form-field>
       </div>
