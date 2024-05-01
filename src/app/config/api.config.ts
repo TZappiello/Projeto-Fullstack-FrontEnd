@@ -1,4 +1,4 @@
 export const API_CONFIG = {
-    baseUrl: 'https://prod-fullstack-backend.herokuapp.com'
+    baseUrl: 'https://projeto-fullstack-backend-zvji.onrender.com'
     //baseUrl: 'http://localhost:8080'
 }
